@@ -18,14 +18,17 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-<b>Email:</b> xl3833 at columbia dot edu
+<b>Email:</b> xl3383 at columbia dot edu
 
-I am a term Assistant Professor at Department of Applied Physics and Applied Mathematics, Columbia University. I completed my PhD in applied math at Courant Institute of Mathematical Sciences, New York University, advised by <a href='https://math.nyu.edu/~kohn/'>Robert V. Kohn</a>.
+I am a Chu Assistant Professor at Department of Applied Physics and Applied Mathematics, Columbia University and my supervisor is <a href='https://www.columbia.edu/~miw2103/'>Michael I. Weinstein</a>. 
+
+I completed my PhD in applied math at Courant Institute of Mathematical Sciences, New York University, advised by <a href='https://math.nyu.edu/~kohn/'>Robert V. Kohn</a>.
 
 My research interests:
 <ul>
   <li>Calculus of Variations</li>
   <li>Partial Differential Equations</li>
+  <li>Spectral Theory</li>
   <li>Elasticity Theory</li>
   <li>Mechanical metamaterials</li>
 </ul>
