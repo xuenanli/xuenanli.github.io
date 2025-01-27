@@ -24,13 +24,15 @@ I am a Chu Assistant Professor at Department of Applied Physics and Applied Math
 
 I completed my PhD in applied math at Courant Institute of Mathematical Sciences, New York University, advised by <a href='https://math.nyu.edu/~kohn/'>Robert V. Kohn</a>.
 
+You can download my CV <a href="/xnli_cv.pdf" here>here</a>.
+
 My research interests:
 <ul>
   <li>Calculus of Variations</li>
   <li>Partial Differential Equations</li>
   <li>Spectral Theory</li>
-  <li>Elasticity Theory</li>
-  <li>Mechanical metamaterials</li>
+  <li>Mechanical Metamaterials</li>
+  <li>Rigidity Theory and Singularity in Bar Frameworks and Tensegrity</li>
 </ul>
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
