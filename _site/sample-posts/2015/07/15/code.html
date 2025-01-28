@@ -135,7 +135,7 @@
     </p>
   </header>
 
-  <article class="post-content">
+  <!-- <article class="post-content">
     
     <div id="markdown-content">
       <p>This theme implements a built-in Jekyll feature, the use of Rouge, for syntax highlighting.
@@ -167,7 +167,7 @@ All you have to do is wrap your code in markdown code tags:</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>For displaying code in a list item, you have to be aware of the indentation, as stated in this <a href="https://stackoverflow.com/questions/34987908/embed-a-code-block-in-a-list-item-with-proper-indentation-in-kramdown/38090598#38090598" rel="external nofollow noopener" target="_blank">Stackoverflow answer</a>. You must indent your code by <strong>(3 * bullet_indent_level)</strong> spaces. This is because kramdown (the markdown engine used by Jekyll) indentation for the code block in lists is determined by the column number of the first non-space character after the list item marker. For example:</p>
+<p>For displaying code in a list item, you have to be aware of the indentation, as stated in this <a href="https://stackoverflow.com/questions/34987908/embed-a-code-block-in-a-list-item-with-proper-indentation-in-kramdown/38090598#38090598">Stackoverflow answer</a>. You must indent your code by <strong>(3 * bullet_indent_level)</strong> spaces. This is because kramdown (the markdown engine used by Jekyll) indentation for the code block in lists is determined by the column number of the first non-space character after the list item marker. For example:</p>
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> We can put fenced code blocks inside nested bullets, too.
 <span class="p">   1.</span> Like this:
@@ -184,8 +184,7 @@ All you have to do is wrap your code in markdown code tags:</p>
   <li>We can put fenced code blocks inside nested bullets, too.
     <ol>
       <li>Like this:
-        <div class="language-c highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
+        <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">);</span>
 </code></pre></div>        </div>
       </li>
       <li>The key is to indent your fenced block in the same line as the first character of the line.</li>
@@ -197,13 +196,12 @@ All you have to do is wrap your code in markdown code tags:</p>
 
 <p>If you want to display line numbers for a specific code block, all you have to do is wrap your code in a liquid tag:</p>
 
-<p>{% highlight c++ linenos %}  <br> code code code <br> {% endhighlight %}</p>
+<p>{% highlight c++ linenos %}  <br /> code code code <br /> {% endhighlight %}</p>
 
 <p>The keyword <code class="language-plaintext highlighter-rouge">linenos</code> triggers display of line numbers.
 Produces something like this:</p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr>
-<td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -220,8 +218,7 @@ Produces something like this:</p>
 15
 16
 17
-</pre></td>
-<td class="code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="k">const</span> <span class="err">\</span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</pre></td><td class="code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="k">const</span> <span class="err">\</span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
 <span class="p">{</span>
     <span class="n">string</span> <span class="n">myString</span><span class="p">;</span>
 
@@ -238,12 +235,11 @@ Produces something like this:</p>
 
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></td>
-</tr></tbody></table></code></pre></figure>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 
     </div>
-  </article>
+  </article> -->
 </div>
 
       
@@ -253,7 +249,7 @@ Produces something like this:</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2025 Xuenan  Li. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: January 27, 2025.
+
       </div>
     </footer>
 
