@@ -6,6 +6,9 @@ title: Publications
 nav: true
 nav_order: 3
 ---
+
+<b>Publications and preprints</b>
+
 <!-- _pages/publications.md -->
 <div class="publications">
 

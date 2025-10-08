@@ -13,8 +13,8 @@ nav_order: 4
     <li>Columbia University
         <ul>
             <li>
-                2025 Spring: APMA-E4101-001: APPLIED MATH III:DYNAMICAL SYSTMS
-                [<a href="/assets/syllabus/syllabus-ds.pdf">syllabus</a>]
+                2025 Fall: APMA-E4204-001: FUNCTNS OF A COMPLEX VARIABLE
+                [<a href="/assets/syllabus/syllabus-cplx.pdf">syllabus</a>]
             </li>
         </ul>
     </li>
@@ -25,8 +25,11 @@ nav_order: 4
     <li>Columbia University
         <ul>
             <li>
+                2025 Spring: APMA-E4101-001: APPLIED MATH III:DYNAMICAL SYSTMS
+                [<a href="/assets/syllabus/syllabus-ds.pdf">syllabus</a>]
+            </li>
+            <li>
                 2024 Fall: APMA-E4204-001: FUNCTNS OF A COMPLEX VARIABLE
-                [<a href="/assets/syllabus/syllabus-cplx.pdf">syllabus</a>]
             </li>
             <li>
                 2024 Spring: APMA-E4101-001: APPLIED MATH III:DYNAMICAL SYSTMS
@@ -36,7 +39,7 @@ nav_order: 4
             </li>
         </ul>
     </li>
-
+    <div style="margin-top: 1em;"></div>
     <li>Courant Institute, New York University
     	<ul>
             <li>
