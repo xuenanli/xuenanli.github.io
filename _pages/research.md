@@ -16,7 +16,7 @@ nav_order: 2
 <!-- Jumping Link -->
 <ul>
     <li><a href="#section1">Effective elastic behavior of mechanism-based mechanical metamaterials</a></li>
-    <li><a href="#section2">Singular bar frameworks and tensegrity frameworks</a></li>
+    <li><a href="#section2">Higher-order rigid bar joint frameworks with applications to tensegrity structures</a></li>
     <li><a href="#section3">Pseudo-magnetism in the slowly-strained discrete honeycomb lattice</a></li>
 </ul>
 
