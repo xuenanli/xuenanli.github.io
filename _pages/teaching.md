@@ -8,16 +8,18 @@ nav_order: 4
 ---
 
 
-<b>Previous Teaching:</b>
+<b>Current teaching</b>
+
+<b>Previous teaching</b>
 <ul>
     <li>Columbia University
         <ul>
             <li>
-                2026 Spring, 2025 Spring, 2024 Spring: APMA-E4101-001: APPLIED MATH III:DYNAMICAL SYSTMS
+                2026 Spring, 2025 Spring, 2024 Spring: APMA-E4101-001: <b>APPLIED MATH III:DYNAMICAL SYSTMS</b>
                 [<a href="/assets/syllabus/syllabus-ds.pdf">syllabus</a>]
             </li>
             <li>
-                2025 Fall, 2024 Fall, 2023 Fall: APMA-E4204-001: FUNCTNS OF A COMPLEX VARIABLE
+                2025 Fall, 2024 Fall, 2023 Fall: APMA-E4204-001: <b>FUNCTNS OF A COMPLEX VARIABLE</b>
                 [<a href="/assets/syllabus/syllabus-cplx.pdf">syllabus</a>]
             </li>
         </ul>
