@@ -545,6 +545,115 @@ footer.sticky-bottom {
   }
 }
 
+.research-projects {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card figure {
+    display: block;
+    height: 260px;
+    width: 100%;
+    padding: 0.3rem 2rem 1.5rem;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .card picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain !important;
+    object-position: center;
+  }
+
+  a[href="/research/pseudo-magnetism/"] figure {
+    padding: 0.45rem 2rem 0.45rem;
+  }
+
+  .card-body {
+    padding: 0.9rem 1.25rem 0.35rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-coauthors-body {
+    padding-top: 0.35rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .research-card-title-link,
+  .research-card-figure-link {
+    display: block;
+  }
+
+  .research-card-figure-link {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card figure.research-card-stacked-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    height: auto;
+    margin-top: -0.75rem;
+  }
+
+  .card figure.research-card-stacked-figure img {
+    display: block;
+    height: auto;
+    width: 75%;
+    object-fit: contain !important;
+  }
+
+  .card figure.research-card-stacked-figure img:nth-child(2) {
+    transform: translate(-2rem, -1.2rem);
+  }
+
+  a[href="/research/pseudo-magnetism/"].research-card-figure-link + .card-coauthors-body {
+    margin-top: -1.2rem;
+  }
+
+  .card .card-title {
+    font-size: 1rem;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+    text-transform: none;
+  }
+
+  .card-coauthors {
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    margin-bottom: 0;
+  }
+}
+
+.related-papers-heading {
+  margin-top: 2rem;
+}
+
+.related-papers {
+  margin-top: 0.75rem;
+}
+
 
 // Publications
 

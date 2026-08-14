@@ -9,26 +9,27 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>284A Engineering Terrace</p>
-    <p>500 W 120th St</p>
-    <p>New York, NY 10027</p>
+    <p>150 N University St</p>
+    <p>West Lafayette</p>
+    <p>IN 47906, USA</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-<b>Email:</b> xl3383 at columbia dot edu
+<b>Email:</b> xuenan at purdue dot edu
+<br><b>Office:</b> Room 408
 
-I am a Chu Assistant Professor at Department of Applied Physics and Applied Mathematics, Columbia University and my supervisor is <a href='https://www.columbia.edu/~miw2103/'>Michael I. Weinstein</a>. 
+I am an Assistant Professor in the Department of Mathematics at Purdue University. Previously, I was a Chu Assistant Professor in the Department of Applied Physics and Applied Mathematics at Columbia University, working with <a href='https://www.columbia.edu/~miw2103/'>Michael I. Weinstein</a>. 
 
 I completed my PhD in applied math at Courant Institute of Mathematical Sciences, New York University, advised by <a href='https://math.nyu.edu/~kohn/'>Robert V. Kohn</a>.
 
-You can download my CV <a href="/xnli_cv.pdf" here>here</a>.
+I obtained my bachelor's degree from University of Michigan, Ann Arbor with a double major in mathematics and data science.
 
-<b>I am currently on the tenure-track faculty job market for positions beginning in Fall 2026.</b>
+You can download my CV <a href="/xnli_cv.pdf">here</a>.
 
-My research interests:
+<b>My Research Interests</b>
 <ul>
   <li>Calculus of Variations, PDE and Spectral Theory</li>
   <p><em>with particular focus on problems from physics, mechanics, and materials science.</em></p>

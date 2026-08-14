@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Research | Xuenan  Li</title>
+    <title>Pseudo-magnetism in the slowly-strained discrete honeycomb lattice | Xuenan  Li</title>
     <meta name="author" content="Xuenan  Li">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="Discrete multiscale analysis, magnetic Dirac operators, and Landau levels in strained honeycomb lattices.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css?v=research-cards-20260813a">
-    <link rel="canonical" href="http://localhost:4000/research/">
+    <link rel="canonical" href="http://localhost:4000/research/pseudo-magnetism/">
 
     <!-- Dark Mode -->
     
@@ -79,8 +78,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/research/">Research<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/research/">Research</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">Publications</a>
@@ -117,93 +116,59 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Research</h1>
-            <p class="post-description"></p>
+            <h1 class="post-title">Pseudo-magnetism in the slowly-strained discrete honeycomb lattice</h1>
+            <p class="post-description">Discrete multiscale analysis, magnetic Dirac operators, and Landau levels in strained honeycomb lattices.</p>
           </header>
 
           <article>
-            <p>My research primarily explores the application of Calculus of Variations and spectral theory in material science, with a particular focus on understanding <i>mechanical metamaterials</i> -- carefully designed materials that exhibit exotic functionalities -- from a mathematical perspective. For an overview of mechanical metamaterials, you can refer to this <a href="https://www.nature.com/articles/natrevmats201766" rel="external nofollow noopener" target="_blank">Nature review paper</a>.</p>
+            <p>Honeycomb lattices, underlying 2D materials like graphene, possess special points in their band structures known as <em>Dirac points</em>, where two dispersion surfaces intersect conically. Near these points, the electronic or wave dynamics are governed by an effective two-dimensional Dirac operator. The fact that wavepackets evolve under these effective dynamics is key to understanding the remarkable electronic properties of graphene and selected materials.</p>
 
-<p>My current projects can be categorized into the following areas:</p>
+<p>In photonic crystals, a remarkable feature arises when the lattice is strained: slowly-varying non-uniform deformations generate effective pseudo-magnetic potentials that alter the band structure and, in turn, the wave propagation. In particular, the slowly-varying quadratic displacement is predicted to generate a Landau gauge for a constant magnetic field. This, in turn, gives rise to <em>Landau levels</em>, which appear in the band structure as flat energy bands. Flat bands imply vanishing group velocity; wavepackets supported on them remain localized rather than spreading, with their energy effectively trapped in the lattice. This phenomenon has been confirmed experimentally.</p>
 
-<!-- pages/research.md -->
-<div class="projects research-projects">
-  <div class="grid">
-<!-- _includes/research_project_card.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <div class="card hoverable">
-    <div class="card-body">
-      <a class="research-card-title-link" href="/research/effective-elastic-behavior/">
-          <h2 class="card-title">&bull; Effective elastic behavior of mechanism-based mechanical metamaterials</h2>
-        </a>
-    </div>
-    <a class="research-card-figure-link" href="/research/effective-elastic-behavior/">
+<p>Motivated by observations in photonic strained honeycomb lattices, we analyze slowly strained honeycomb lattices within a discrete tight-binding model. We use a formal discrete multiscale expansion and derive an effective 2D magnetic Dirac operator for general deformations, which agrees with predictions from the photonic and electronic settings. We also prove the first rigorous convergence result of the discrete multiscale expansion for truncated Landau-gauge deformations with bounded gradients.</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
 <figure>
 
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/kagome-3-center-width-3q-height-3q.gif" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/landau-level.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Honeycomb structure with Dirac points and Landau levels." onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
-    </a>
-    <div class="card-body card-coauthors-body">
-      <p class="card-coauthors">Joint work with <a href="https://math.nyu.edu/~kohn/" rel="external nofollow noopener" target="_blank">Robert V. Kohn</a>; numerical collaboration with <a href="https://seas.harvard.edu/person/katia-bertoldi" rel="external nofollow noopener" target="_blank">Katia Bertoldi</a> and <a href="https://www.boleideng.com" rel="external nofollow noopener" target="_blank">Bolei Deng</a>.</p>
     </div>
-  </div>
 </div>
-<!-- _includes/research_project_card.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <div class="card hoverable">
-    <div class="card-body">
-      <a class="research-card-title-link" href="/research/higher-order-rigidity/">
-          <h2 class="card-title">&bull; Higher-order rigid bar-joint frameworks with applications to tensegrity structures</h2>
-        </a>
-    </div>
-    <a class="research-card-figure-link" href="/research/higher-order-rigidity/">
-<figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/tensegrity.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-    </a>
-    <div class="card-body card-coauthors-body">
-      <p class="card-coauthors">Joint work with <a href="https://personal.math.ubc.ca/~holmescerfon/" rel="external nofollow noopener" target="_blank">Miranda Holmes-Cerfon</a>, <a href="https://artsandsciences.syracuse.edu/people/faculty/christian-d-santangelo/" rel="external nofollow noopener" target="_blank">Christian D Santangelo</a>, and Mihnea Leonte.</p>
-    </div>
-  </div>
+<div class="caption">
+    Honeycomb structure with Dirac points in the band structure and deformed honeycomb with Landau levels.
 </div>
-<!-- _includes/research_project_card.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <div class="card hoverable">
-    <div class="card-body">
-      <a class="research-card-title-link" href="/research/pseudo-magnetism/">
-          <h2 class="card-title">&bull; Pseudo-magnetism in the slowly-strained discrete honeycomb lattice</h2>
-        </a>
-    </div>
-    <a class="research-card-figure-link" href="/research/pseudo-magnetism/">
-<figure class="research-card-stacked-figure">
-          <img src="/assets/img/landau-level-top.png" alt="project thumbnail top panel">
-          <img src="/assets/img/landau-level-bottom.png" alt="project thumbnail bottom panel">
-        </figure>
-    </a>
-    <div class="card-body card-coauthors-body">
-      <p class="card-coauthors">Joint work with <a href="https://www.columbia.edu/~miw2103/" rel="external nofollow noopener" target="_blank">Michael I. Weinstein</a>.</p>
+
+<p>This is a joint work with <a href="https://www.columbia.edu/~miw2103/" rel="external nofollow noopener" target="_blank">Michael I. Weinstein</a>.</p>
+
+<h2 class="bibliography related-papers-heading">Related papers</h2>
+
+<div class="publications related-papers">
+<h2 class="bibliography">2026</h2>
+<ol class="bibliography">
+<li>
+  <div class="row">
+    <div class="col-sm-2 preview"><figure><picture><img src="/assets/img/publication_preview/ac-deformed.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="ac-deformed.png"></picture></figure></div>
+    <div id="li2026pseudomagnetism" class="col-sm-8">
+      <div class="title">Pseudo-magnetism in a strained discrete honeycomb lattice</div>
+      <div class="author">Xuenan Li,&nbsp;and&nbsp;Michael I. Weinstein</div>
+      <div class="periodical"><em>arXiv preprint arXiv:2603.27503</em>, 2026</div>
+      <div class="periodical"></div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/2603.27503" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+        <a href="/assets/pdf/pseudo-magnetism-honeycomb.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+      </div>
     </div>
   </div>
-</div>
-  </div>
+</li>
+</ol>
 </div>
 
           </article>

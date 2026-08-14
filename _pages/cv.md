@@ -1,8 +1,9 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: false
 nav_order: 5
-cv_pdf: xnli_cv.pdf
 ---
+
+You can download my CV [here]({{ '/xnli_cv.pdf' | relative_url }}).

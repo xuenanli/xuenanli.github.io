@@ -1,0 +1,38 @@
+<!-- _includes/research_project_card.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <div class="card hoverable">
+    <div class="card-body">
+      {% if project.redirect -%}
+      <a class="research-card-title-link" href="{{ project.redirect }}">
+        {%- else -%}
+        <a class="research-card-title-link" href="{{ project.url | relative_url }}">
+          {%- endif %}
+          <h2 class="card-title">&bull; {{ project.title }}</h2>
+        </a>
+    </div>
+    {%- if project.img %}
+    {% if project.redirect -%}
+    <a class="research-card-figure-link" href="{{ project.redirect }}">
+      {%- else -%}
+        <a class="research-card-figure-link" href="{{ project.url | relative_url }}">
+          {%- endif %}
+        {%- if project.img_top and project.img_bottom %}
+        <figure class="research-card-stacked-figure">
+          <img src="{{ project.img_top | relative_url }}" alt="project thumbnail top panel">
+          <img src="{{ project.img_bottom | relative_url }}" alt="project thumbnail bottom panel">
+        </figure>
+        {%- else %}
+        {%- include figure.html
+          path=project.img
+          alt="project thumbnail" -%}
+        {%- endif %}
+    </a>
+    {%- endif %}
+    {%- if project.coauthors %}
+    <div class="card-body card-coauthors-body">
+      <p class="card-coauthors">{{ project.coauthors }}</p>
+    </div>
+    {%- endif %}
+  </div>
+</div>
