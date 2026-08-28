@@ -11,6 +11,9 @@ nav_order: 5
 
 <ul class="mentoring-list">
     <li>
+        <b>Jin Hu</b>, Spring 2026-present.
+    </li>
+    <li>
         <b>Jingkai Wang</b>, Fall 2025-present.
         <br>
         Jingkai will be a <b>Ph.D. student in Mathematics at the University of California, Santa Barbara</b> in Fall 2026.
