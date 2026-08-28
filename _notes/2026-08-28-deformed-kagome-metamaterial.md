@@ -175,4 +175,8 @@ In general, when a deformed Kagome metamaterial is not uniform elliptic, it has 
 
 <div id="dk-regime-plot" class="dk-regime-row" aria-label="Elliptic and hyperbolic Kagome regimes"></div>
 
+## Reference
+
+- D. Zeb Rocklin, Shangnan Zhou, Kai Sun, and Xiaoming Mao, [Transformable topological mechanical metamaterials](https://doi.org/10.1038/ncomms14201), *Nature Communications* **8**, 14201 (2017).
+
 <script defer src="{{ '/assets/js/deformed_kagome.js' | relative_url }}"></script>
