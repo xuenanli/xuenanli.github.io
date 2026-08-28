@@ -171,6 +171,9 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
+  notes:
+    output: true
+    permalink: /notes/:path/
   projects:
     output: true
     permalink: /projects/:path/
@@ -232,6 +235,11 @@ plugins:
 
 # Sitemap settings
 defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: note
   - scope:
       path: "assets"
     values:

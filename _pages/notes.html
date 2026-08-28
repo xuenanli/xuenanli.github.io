@@ -1,0 +1,104 @@
+---
+layout: default
+title: Notes
+permalink: /notes/
+description: Short observations, useful computations, and ideas in progress.
+nav: true
+nav_order: 6
+---
+
+<div class="post notes-page">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  {%- assign notes = site.notes | sort: "date" | reverse -%}
+  {%- if notes.size > 0 -%}
+    <form class="notes-search" role="search" aria-label="Search notes">
+      <label class="sr-only" for="notes-search-input">Search notes</label>
+      <div class="notes-search-control">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input
+          id="notes-search-input"
+          type="search"
+          placeholder="Search notes"
+          autocomplete="off"
+          aria-controls="notes-list"
+          aria-describedby="notes-search-status"
+        >
+        <button id="notes-search-clear" type="button" aria-label="Clear note search" hidden>
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <p id="notes-search-status" class="notes-search-status" aria-live="polite"></p>
+    </form>
+
+    <ul id="notes-list" class="post-list note-list">
+      {%- for note in notes -%}
+        {%- assign read_time = note.content | number_of_words | divided_by: 180 | plus: 1 -%}
+        {%- assign tags = note.tags | join: "" -%}
+        {%- assign categories = note.categories | join: "" -%}
+        {%- assign year = note.date | date: "%Y" -%}
+        {%- capture note_search_text -%}
+          {{ note.title }} {{ note.description }} {{ note.tags | join: " " }} {{ note.categories | join: " " }} {{ note.content | strip_html | strip_newlines }}
+        {%- endcapture -%}
+        <li class="note-item" data-note-search="{{ note_search_text | downcase | escape }}">
+          <div class="row align-items-start">
+            <div class="{% if note.thumbnail %}col-sm-8{% else %}col-12{% endif %}">
+              <h3><a class="post-title" href="{{ note.url | relative_url }}">{{ note.title }}</a></h3>
+              {%- if note.description -%}
+                <p>{{ note.description }}</p>
+              {%- endif -%}
+              <p class="post-meta">
+                {{ read_time }} min read &nbsp;&middot;&nbsp; {{ note.date | date: "%B %-d, %Y" }}
+              </p>
+              <p class="post-tags">
+                <span><i class="fas fa-calendar fa-sm" aria-hidden="true"></i> {{ year }}</span>
+                {%- if tags != "" -%}
+                  &nbsp;&middot;&nbsp;
+                  {% for tag in note.tags -%}
+                    <span><i class="fas fa-hashtag fa-sm" aria-hidden="true"></i> {{ tag }}</span>{% unless forloop.last %}&nbsp;&nbsp;{% endunless %}
+                  {%- endfor %}
+                {%- endif -%}
+                {%- if categories != "" -%}
+                  &nbsp;&middot;&nbsp;
+                  {% for category in note.categories -%}
+                    <span><i class="fas fa-tag fa-sm" aria-hidden="true"></i> {{ category }}</span>{% unless forloop.last %}&nbsp;&nbsp;{% endunless %}
+                  {%- endfor %}
+                {%- endif -%}
+              </p>
+            </div>
+            {%- if note.thumbnail -%}
+              <div class="col-sm-4 mt-3 mt-sm-0">
+                <a href="{{ note.url | relative_url }}" aria-label="Read {{ note.title }}">
+                  <img
+                    class="note-thumbnail"
+                    src="{{ note.thumbnail | relative_url }}"
+                    alt="{{ note.thumbnail_alt | default: note.title }}"
+                  >
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <div id="notes-search-empty" class="notes-search-empty" hidden>
+      <i class="far fa-file-alt" aria-hidden="true"></i>
+      <p>No notes match your search.</p>
+    </div>
+    <nav id="notes-pagination" class="notes-pagination" aria-label="Notes pagination">
+      <div class="notes-pagination-bar">
+        <button id="notes-page-previous" type="button" aria-label="Previous page">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div id="notes-page-numbers" class="notes-page-numbers"></div>
+        <button id="notes-page-next" type="button" aria-label="Next page">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  {%- endif -%}
+</div>
+
+<script defer src="{{ '/assets/js/notes_search.js' | relative_url }}"></script>
