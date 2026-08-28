@@ -8,7 +8,7 @@ thumbnail_alt: A deformed Kagome lattice matching the figure at the top of the n
 permalink: /notes/deformed-kagome-metamaterial/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/deformed_kagome.css' | relative_url }}?v=20260828b">
+<link rel="stylesheet" href="{{ '/assets/css/deformed_kagome.css' | relative_url }}?v=20260828c">
 
 <div id="dk-kagome-hero" class="dk-hero" aria-label="Deformed Kagome metamaterial hero figure"></div>
 
@@ -179,4 +179,4 @@ In general, when a deformed Kagome metamaterial is not uniform elliptic, it has 
 
 - D. Zeb Rocklin, Shangnan Zhou, Kai Sun, and Xiaoming Mao, [Transformable topological mechanical metamaterials](https://doi.org/10.1038/ncomms14201), *Nature Communications* **8**, 14201 (2017).
 
-<script defer src="{{ '/assets/js/deformed_kagome.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/deformed_kagome.js' | relative_url }}?v=20260828c"></script>

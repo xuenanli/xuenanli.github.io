@@ -7,11 +7,19 @@ nav: true
 nav_order: 3
 ---
 
-<b>Publications and preprints</b>
-
 <!-- _pages/publications.md -->
+<h2 class="publication-section-title">Preprints</h2>
+
 <div class="publications">
 
-{% bibliography -f {{ site.scholar.bibliography }} %}
+{% bibliography -f {{ site.scholar.bibliography }} -q @*[status=preprint] %}
+
+</div>
+
+<h2 class="publication-section-title">Publications</h2>
+
+<div class="publications">
+
+{% bibliography -f {{ site.scholar.bibliography }} -q @*[status=published] %}
 
 </div>

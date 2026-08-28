@@ -163,9 +163,30 @@ blockquote {
   }
 }
 
+.publication-section-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
 .notes-page {
+  .notes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    .post-title {
+      margin-bottom: 0;
+    }
+  }
+
   .notes-search {
-    margin: 2rem 0 0;
+    position: relative;
+    flex: 0 1 20rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 0 0 auto;
   }
 
   .notes-search-control {
@@ -182,7 +203,7 @@ blockquote {
 
     input {
       width: 100%;
-      min-height: 3rem;
+      min-height: 2.75rem;
       padding: 0.65rem 3rem 0.65rem 2.75rem;
       color: var(--global-text-color);
       border: 1px solid var(--global-divider-color);
@@ -225,10 +246,15 @@ blockquote {
   }
 
   .notes-search-status {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
     min-height: 1.25rem;
-    margin: 0.5rem 0 0;
+    margin: 0.3rem 0 0;
     color: var(--global-text-color-light);
     font-size: 0.875rem;
+    text-align: right;
   }
 
   .note-list {
@@ -327,6 +353,23 @@ blockquote {
   }
 
   @media (max-width: 575px) {
+    .notes-header {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .notes-search {
+      align-self: stretch;
+      max-width: none;
+      margin-left: 0;
+    }
+
+    .notes-search-status {
+      position: static;
+      text-align: left;
+    }
+
     .notes-pagination button {
       min-width: 2.75rem;
       height: 2.75rem;

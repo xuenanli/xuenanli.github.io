@@ -161,7 +161,7 @@ const thetaOut = thetaRow.createSpan({ cls: "dk-theta" });
 const tileSvg = panel(
   root,
   "B · Deformed Kagome tile",
-  "A three by three periodic tile with lattice vectors",
+  "A seven by five periodic tile with lattice vectors",
   "dk-tile-panel"
 );
 
@@ -169,6 +169,8 @@ const slider = thetaControl.input;
 const aSlider = aControl.input;
 const bSlider = bControl.input;
 const basisTheta = 1.60;
+const tileColumns = 7;
+const tileRows = 5;
 
 const readout = root.createDiv({ cls: "dk-readout" });
 const geometryOut = readout.createSpan();
@@ -320,7 +322,7 @@ function fixedTileBounds() {
   for (let k = 0; k <= 120; k++) {
     const theta = Number(slider.min) + (Number(slider.max) - Number(slider.min)) * k / 120;
     const g = geometry(theta, true);
-    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+    for (let i = 0; i < tileColumns; i++) for (let j = 0; j < tileRows; j++) {
       const shift = add(mul(i, g.v1), mul(j, g.v2));
       [g.O, g.R, g.S, g.P, g.Q].forEach(p => points.push(add(p, shift)));
     }
@@ -337,13 +339,13 @@ function drawTile(theta) {
   el(marker, "path", { d: "M0,0 L7,3.5 L0,7 Z", fill: "var(--dk-red)" });
   const g = geometry(theta, true);
   const map = mapper(fixedTileBounds(), 600, 380, 36);
-  for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+  for (let i = 0; i < tileColumns; i++) for (let j = 0; j < tileRows; j++) {
     const shift = add(mul(i, g.v1), mul(j, g.v2));
     const cell = Object.fromEntries(["O", "R", "S", "P", "Q"].map(key => [key, add(g[key], shift)]));
     el(tileSvg, "path", { d: path([cell.O, cell.R, cell.S], map), class: "dk-top" });
     el(tileSvg, "path", { d: path([cell.O, cell.P, cell.Q], map), class: "dk-bottom" });
   }
-  const thetaOrigin = add(g.v1, g.v2);
+  const thetaOrigin = add(mul(3, g.v1), mul(2, g.v2));
   const thetaStart = Math.atan2(g.P[1], g.P[0]);
   arc(tileSvg, thetaStart, thetaStart + theta, 0.25, map, "dk-theta-arc", thetaOrigin);
   label(
@@ -467,7 +469,7 @@ const uniformPanel = standardRoot.createDiv({ cls: "uniform-panel" });
 const uniformPanelLabel = uniformPanel.createDiv({ cls: "uniform-panel-label" });
 const standardSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 standardSvg.setAttribute("role", "img");
-standardSvg.setAttribute("aria-label", "A three by three uniformly elliptic perturbed Kagome tile anchored at one fixed hinge, with lattice vectors and twist angle");
+standardSvg.setAttribute("aria-label", "A seven by five uniformly elliptic perturbed Kagome tile anchored at one fixed hinge, with lattice vectors and twist angle");
 uniformPanel.appendChild(standardSvg);
 const uniformStatus = standardRoot.createDiv({ cls: "uniform-status" });
 
@@ -544,7 +546,7 @@ function getUniformSweepBounds() {
   for (let k = 0; k <= 160; k++) {
     const theta = 0.55 + (3.95 - 0.55) * k / 160;
     const g = uniformGeometry(theta);
-    for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
+    for (let i = -3; i <= 3; i++) for (let j = -2; j <= 2; j++) {
       const shift = sAdd(sMul(i, g.v1), sMul(j, g.v2));
       [g.O, g.R, g.S, g.P, g.Q].forEach(point => points.push(sAdd(point, shift)));
     }
@@ -566,7 +568,7 @@ function drawStandardKagome() {
   const height = width < 560 ? 350 : 430;
   standardSvg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   sEl(standardSvg, "title", {}, "Uniformly elliptic perturbed Kagome lattice");
-  sEl(standardSvg, "desc", {}, "A three by three periodic Kagome tile made from alternating congruent blue and orange triangles with side lengths zero point nine five, one, and one point one. The central hinge O is fixed while theta changes, and the first primitive lattice vector is horizontal.");
+  sEl(standardSvg, "desc", {}, "A seven by five periodic Kagome tile made from alternating congruent blue and orange triangles with side lengths zero point nine five, one, and one point one. The central hinge O is fixed while theta changes, and the first primitive lattice vector is horizontal.");
   const defs = sEl(standardSvg, "defs");
   const marker = sEl(defs, "marker", {
     id: "uniform-arrow",
@@ -581,7 +583,7 @@ function drawStandardKagome() {
 
   const g = uniformGeometry(theta);
   const cells = [];
-  for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
+  for (let i = -3; i <= 3; i++) for (let j = -2; j <= 2; j++) {
     const shift = sAdd(sMul(i, g.v1), sMul(j, g.v2));
     const cell = Object.fromEntries(
       ["O", "R", "S", "P", "Q"].map(key => [key, sAdd(g[key], shift)])
