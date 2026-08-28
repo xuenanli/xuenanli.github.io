@@ -8,7 +8,7 @@ thumbnail_alt: A deformed Kagome lattice matching the figure at the top of the n
 permalink: /notes/deformed-kagome-metamaterial/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/deformed_kagome.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/deformed_kagome.css' | relative_url }}?v=20260828b">
 
 <div id="dk-kagome-hero" class="dk-hero" aria-label="Deformed Kagome metamaterial hero figure"></div>
 

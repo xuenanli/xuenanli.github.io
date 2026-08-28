@@ -114,8 +114,8 @@
     padding-right: 0.25rem;
   }
   .dk-note .dk-mechanism-header {
-    width: min(42rem, 100%);
-    margin: 2rem auto 0.75rem;
+    width: 100%;
+    margin: 2rem 0 0.75rem;
   }
   .dk-note .dk-mechanism-header .dk-title { color: #000; }
   .dk-note .dk-theta-controls .dk-control-row {
