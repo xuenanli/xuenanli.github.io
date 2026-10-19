@@ -1,29 +1,46 @@
-          <div class="news">
-            {% if site.news != blank -%}
-            {%- assign news_size = site.news | size -%}
-            <div class="table-responsive" {% if include.limit and site.announcements.scrollable and news_size > 3 %}style="max-height: 60vw"{% endif %}>
-              <table class="table table-sm table-borderless">
-              {%- assign news = site.news | reverse -%}
-              {% if include.limit and site.announcements.limit %}
-              {% assign news_limit = site.announcements.limit %}
-              {% else %}
-              {% assign news_limit = news_size %}
-              {% endif %}
-              {% for item in news limit: news_limit %}
-                <tr>
-                  <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-                  <td>
-                    {% if item.inline -%}
-                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-                    {%- else -%}
-                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {%- endif %}
-                  </td>
-                </tr>
-              {%- endfor %}
-              </table>
-            </div>
-          {%- else -%}
-            <p>No news so far...</p>
-          {%- endif %}
-          </div>
+{%- assign news = site.news | sort: "date" -%}
+{%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- unless include.period == "upcoming" -%}
+  {%- assign news = news | reverse -%}
+{%- endunless -%}
+
+{%- capture news_rows -%}
+  {%- assign previous_year = "" -%}
+  {%- for item in news -%}
+    {%- assign event_end_day = item.end_date | default: item.date | date: "%Y%m%d" | plus: 0 -%}
+    {%- if include.period == "upcoming" and event_end_day < today -%}
+      {%- continue -%}
+    {%- elsif include.period == "past" and event_end_day >= today -%}
+      {%- continue -%}
+    {%- endif -%}
+    {%- if include.period == "past" -%}
+      {%- assign item_year = item.date | date: "%Y" -%}
+      {%- if item_year != previous_year -%}
+        <tr class="news-year" data-news-year="{{ item_year }}">
+          <th colspan="2"><h3 class="news-year-heading">{{ item_year }}</h3></th>
+        </tr>
+        {%- assign previous_year = item_year -%}
+      {%- endif -%}
+    {%- endif -%}
+    <tr data-news-start="{{ item.date | date: '%Y-%m-%d' }}" data-news-end="{{ item.end_date | default: item.date | date: '%Y-%m-%d' }}">
+      <th scope="row" class="news-date"><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% if item.date_label %}{{ item.date_label }}{% else %}{{ item.date | date: "%b %-d, %Y" }}{% endif %}</time></th>
+      <td class="news-content">
+        {% if item.inline -%}
+          {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+        {%- else -%}
+          <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {%- endif %}
+      </td>
+    </tr>
+  {%- endfor -%}
+{%- endcapture -%}
+
+<div class="news" data-news-period="{{ include.period }}">
+    <div class="table-responsive"{% if news_rows.size == 0 %} hidden{% endif %}>
+      <table class="table table-sm table-borderless news-table">
+        <caption class="sr-only">{% if include.period == "upcoming" %}Upcoming trips, soonest first{% else %}Past news, newest first{% endif %}</caption>
+        <tbody>{{ news_rows }}</tbody>
+      </table>
+    </div>
+    <p class="news-empty"{% if news_rows.size > 0 %} hidden{% endif %}>{% if include.period == "upcoming" %}No upcoming trips listed.{% else %}No past news yet.{% endif %}</p>
+</div>

@@ -1,7 +1,20 @@
 ---
 layout: page
-title: news
+title: News
 permalink: /news/
+description: Conferences, workshops, colloquia, and seminars.
+nav: true
+nav_order: 7
 ---
 
-{% include news.html %}
+<section class="news-section" aria-labelledby="upcoming-trips-heading">
+  <h2 id="upcoming-trips-heading" class="news-section-heading"><b>Upcoming Trips</b></h2>
+  {% include news.html period="upcoming" %}
+</section>
+
+<section class="news-section" aria-labelledby="past-news-heading">
+  <h2 id="past-news-heading" class="news-section-heading"><b>Past News</b></h2>
+  {% include news.html period="past" %}
+</section>
+
+<script defer src="{{ '/assets/js/news.js' | relative_url }}?v=years-20261019"></script>
